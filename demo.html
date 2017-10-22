@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>图片3D翻转</title>
+		<style type="text/css">
+		
+		.container img{display: inline-block;}
+		.container{ margin:50px auto ; overflow:hidden;text-align: center;
+				animation: x-spin 5s linear 2s infinite alternate;
+		}
+		.img_3d,.line_3d{
+			-webkit-transform-style:preserve-3d;
+			-webkit-animation-iteration-count:infinite;
+			-webkit-animation-timing-function:linear;
+		}
+		.line1{
+			-webkit-animation-name:y-spin;
+			-webkit-animation-duration:5s;
+		}
+		.line2{
+			-webkit-animation-name:back-y-spin;
+			-webkit-animation-duration:4s;
+		}
+		.line3{
+			-webkit-animation-name:y-spin;
+			-webkit-animation-duration:3s;
+		}
+		@-webkit-keyframes x-spin {
+		0%    { -webkit-transform:rotateX(0deg); }
+		50%   { -webkit-transform:rotateX(180deg); }
+		100%  { -webkit-transform:rotateX(360deg); }
+		}
+		@-webkit-keyframes y-spin {
+		0%    { -webkit-transform:rotateY(0deg); }
+		50%   { -webkit-transform:rotateY(180deg); }
+		100%  { -webkit-transform:rotateY(360deg); }
+		}
+		@-webkit-keyframes back-y-spin {
+		0%    { -webkit-transform:rotateY(360deg); }
+		50%   { -webkit-transform:rotateY(180deg); }
+		100%  { -webkit-transform:rotateY(0deg); }
+		}
+		</style>
+	</head>
+	<body>
+		<div  class="container">
+			<div  class="line1 line_3d">
+				<img class="img_3d"  src="images/1.jpg" />
+				<img class="img_3d"  src="images/2.jpg" />
+				<img class="img_3d"  src="images/3.jpg"/>
+				<img class="img_3d"  src="images/4.jpg" />
+				
+			</div>
+			<div  class="line2 line_3d">
+				<img class="img_3d"  src="images/5.jpg" />
+				<img class="img_3d"  src="images/6.jpg" />
+				<img class="img_3d"  src="images/7.jpg" />
+				
+			</div>
+			<div  class="line3 line_3d">
+				<img class="img_3d"  src="images/8.jpg"/>
+				<img class="img_3d"  src="images/9.jpg" />
+				<img class="img_3d"  src="images/10.jpg" />
+				<img class="img_3d"  src="images/11.jpg" />
+				
+			</div>
+		</div>
+	</body>
+</html>
